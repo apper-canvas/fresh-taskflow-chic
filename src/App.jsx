@@ -33,7 +33,7 @@ function App() {
       <header className="w-full z-10 fixed top-0 bg-white dark:bg-surface-800 shadow-sm">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
-            <div className="text-primary text-2xl font-bold">TaskFlow</div>
+            <div className="text-primary text-2xl font-bold">todoooos</div>
           </div>
           <button
             onClick={toggleDarkMode}
