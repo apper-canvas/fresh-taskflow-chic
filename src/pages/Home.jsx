@@ -93,23 +93,22 @@ const Home = () => {
         
         <div className="flex flex-wrap gap-3">
           <button
+            onClick={() => setFilterStatus('all')}
             className={`btn ${filterStatus === 'all' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
-            className={`btn ${filterStatus === 'all' ? 'btn-primary' : 'btn-outline'}`}
           >
             <ListTodo size={18} className="mr-2" />
             All
           </button>
           <button
+            onClick={() => setFilterStatus('pending')}
             className={`btn ${filterStatus === 'pending' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
-            className={`btn ${filterStatus === 'pending' ? 'btn-primary' : 'btn-outline'}`}
           >
             <Clock size={18} className="mr-2" />
             Pending
           </button>
           <button
+            onClick={() => setFilterStatus('completed')}
             className={`btn ${filterStatus === 'completed' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
-            className={`btn ${filterStatus === 'completed' ? 'btn-primary' : 'btn-outline'}`}
-            <CheckSquare size={18} className="mr-2"/>
             <CheckSquare size={18} className="mr-2" />
             Completed
           </button>
