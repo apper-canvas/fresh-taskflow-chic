@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply text-surface-800 dark:text-surface-100 bg-surface-50 dark:bg-surface-900 font-sans;
+    @apply text-surface-800 dark:text-surface-100 bg-gradient-surface dark:bg-gradient-surface-dark bg-fixed font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -26,7 +26,7 @@
   }
 
   input, textarea, select {
-    @apply bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+    @apply bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm;
   }
 
   button {
@@ -40,15 +40,15 @@
   }
 
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white shadow-sm hover:shadow;
+    @apply bg-gradient-primary hover:bg-gradient-primary-hover text-white shadow-sm hover:shadow transition-all duration-300;
   }
 
   .btn-secondary {
-    @apply bg-secondary hover:bg-secondary-dark text-white shadow-sm hover:shadow;
+    @apply bg-gradient-secondary hover:bg-gradient-secondary-hover text-white shadow-sm hover:shadow transition-all duration-300;
   }
 
   .btn-outline {
-    @apply border border-surface-300 dark:border-surface-600 hover:bg-surface-100 dark:hover:bg-surface-700;
+    @apply border border-surface-300 dark:border-surface-600 hover:bg-surface-100 dark:hover:bg-surface-700 transition-all duration-300;
   }
 
   .card {
@@ -56,19 +56,19 @@
   }
 
   .task-item {
-    @apply p-4 rounded-lg bg-white dark:bg-surface-800 shadow-soft border border-surface-200 dark:border-surface-700 mb-3 transition-all hover:shadow-md;
+    @apply p-4 rounded-lg bg-gradient-card dark:bg-gradient-card-dark shadow-soft border border-surface-200 dark:border-surface-700 mb-3 transition-all hover:shadow-md;
   }
 
   .priority-high {
-    @apply border-l-4 border-accent;
+    @apply border-l-4 border-accent before:bg-gradient-accent;
   }
 
   .priority-medium {
-    @apply border-l-4 border-secondary;
+    @apply border-l-4 border-secondary before:bg-gradient-secondary;
   }
 
   .priority-low {
-    @apply border-l-4 border-primary;
+    @apply border-l-4 border-primary before:bg-gradient-primary;
   }
 }
 
@@ -79,5 +79,33 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+  
+  .bg-gradient {
+    @apply bg-gradient-to-r from-primary via-primary-light to-secondary transition-all duration-300;
+  }
+  
+  .bg-gradient-hover {
+    @apply hover:bg-gradient-to-r hover:from-primary-dark hover:via-primary hover:to-secondary-dark transition-all duration-300;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+  }
+  
+  .border-gradient {
+    @apply border-2 border-transparent bg-gradient-to-r from-primary to-secondary bg-clip-border;
+  }
+  
+  .card-gradient {
+    @apply bg-gradient-to-br from-white to-surface-100 dark:from-surface-800 dark:to-surface-900;
+  }
+  
+  .button-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark text-white transition-all duration-300;
   }
 }

@@ -93,23 +93,23 @@ const Home = () => {
         
         <div className="flex flex-wrap gap-3">
           <button
-            onClick={() => setFilterStatus('all')}
+            className={`btn ${filterStatus === 'all' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
             className={`btn ${filterStatus === 'all' ? 'btn-primary' : 'btn-outline'}`}
           >
             <ListTodo size={18} className="mr-2" />
             All
           </button>
           <button
-            onClick={() => setFilterStatus('pending')}
+            className={`btn ${filterStatus === 'pending' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
             className={`btn ${filterStatus === 'pending' ? 'btn-primary' : 'btn-outline'}`}
           >
             <Clock size={18} className="mr-2" />
             Pending
           </button>
           <button
-            onClick={() => setFilterStatus('completed')}
+            className={`btn ${filterStatus === 'completed' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
             className={`btn ${filterStatus === 'completed' ? 'btn-primary' : 'btn-outline'}`}
-          >
+            <CheckSquare size={18} className="mr-2"/>
             <CheckSquare size={18} className="mr-2" />
             Completed
           </button>
@@ -124,7 +124,7 @@ const Home = () => {
               <button
                 onClick={() => setSelectedCategory('all')}
                 className={`p-2 rounded-lg text-left flex items-center ${selectedCategory === 'all' 
-                  ? 'bg-primary/10 text-primary dark:bg-primary/20'
+                  ? 'bg-gradient-primary/10 text-primary dark:bg-primary/20'
                   : 'hover:bg-surface-100 dark:hover:bg-surface-700'}`}
               >
                 <div className="w-3 h-3 rounded-full bg-surface-400 mr-3"></div>
@@ -136,7 +136,7 @@ const Home = () => {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`p-2 rounded-lg text-left flex items-center ${selectedCategory === category.id 
-                    ? 'bg-primary/10 text-primary dark:bg-primary/20'
+                    ? 'bg-gradient-primary/10 text-primary dark:bg-primary/20'
                     : 'hover:bg-surface-100 dark:hover:bg-surface-700'}`}
                 >
                   <div className="w-3 h-3 rounded-full mr-3" style={{ backgroundColor: category.color }}></div>
@@ -170,7 +170,7 @@ const Home = () => {
           
           <div className="mt-6">
             {filteredTasks.length === 0 ? (
-              <div className="p-8 text-center bg-surface-100 dark:bg-surface-800 rounded-lg">
+              <div className="p-8 text-center bg-gradient-surface dark:bg-gradient-surface-dark rounded-lg">
                 <Info size={40} className="mx-auto mb-4 text-surface-400" />
                 <h3 className="text-xl mb-2">No tasks found</h3>
                 <p className="text-surface-500 dark:text-surface-400">
@@ -204,7 +204,7 @@ const Home = () => {
                             onClick={() => toggleTaskStatus(task.id)}
                             className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full border-2 ${
                               task.status === 'completed'
-                                ? 'bg-primary border-primary flex items-center justify-center'
+                                ? 'bg-gradient-primary border-primary flex items-center justify-center'
                                 : 'border-surface-400'
                             }`}
                           >
@@ -247,10 +247,10 @@ const Home = () => {
                               
                               <span className={`text-xs px-2 py-1 rounded-md ${
                                 task.priority === 'high' 
-                                  ? 'bg-accent/10 text-accent' 
+                                  ? 'bg-gradient-accent/10 text-accent' 
                                   : task.priority === 'medium'
-                                    ? 'bg-secondary/10 text-secondary'
-                                    : 'bg-primary/10 text-primary'
+                                    ? 'bg-gradient-secondary/10 text-secondary'
+                                    : 'bg-gradient-primary/10 text-primary'
                               }`}>
                                 {task.priority.charAt(0).toUpperCase() + task.priority.slice(1)} Priority
                               </span>

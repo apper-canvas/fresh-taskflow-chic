@@ -19,7 +19,7 @@ const NotFound = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <FolderX size={128} className="text-primary opacity-70" />
+          <FolderX size={128} className="bg-gradient-primary bg-clip-text text-transparent opacity-70" />
         </motion.div>
       </div>
 
@@ -58,7 +58,7 @@ const NotFound = () => {
         <Link 
           to="/" 
           className="btn btn-primary px-6 py-2.5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-        >
+          className="btn bg-gradient-primary hover:bg-gradient-primary-hover px-6 py-2.5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-white"
           <ArrowLeft size={18} className="mr-2" />
           Back to Home
         </Link>

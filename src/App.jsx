@@ -30,14 +30,14 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <header className="w-full z-10 fixed top-0 bg-white dark:bg-surface-800 shadow-sm">
+      <header className="w-full z-10 fixed top-0 bg-gradient-card dark:bg-gradient-card-dark shadow-sm">
         <div className="container mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
-            <div className="text-primary text-2xl font-bold">todoooos</div>
+            <div className="bg-gradient-primary bg-clip-text text-transparent text-2xl font-bold">todoooos</div>
           </div>
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-surface-100 dark:bg-surface-700 hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
+            className="p-2 rounded-full bg-gradient-surface dark:bg-gradient-surface-dark hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}

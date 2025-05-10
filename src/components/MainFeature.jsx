@@ -96,7 +96,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
         <h2 className="text-lg font-medium">Task Management</h2>
         
         <button
-          onClick={() => setIsFormOpen(!isFormOpen)}
+          className="btn bg-gradient-primary hover:bg-gradient-primary-hover px-3 shadow-md text-white"
           className="btn btn-primary px-3 shadow-md"
           aria-label={isFormOpen ? "Close task form" : "Add new task"}
         >
@@ -123,7 +123,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <form onSubmit={handleSubmit} className="p-4 bg-surface-50 dark:bg-surface-900/50">
+            <form onSubmit={handleSubmit} className="p-4 bg-gradient-surface dark:bg-gradient-surface-dark">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div className="col-span-full">
                   <label htmlFor="title" className="block text-sm font-medium mb-1">
@@ -218,7 +218,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
                       <span className={`inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium ${
                         taskData.priority === 'low'
                           ? 'bg-primary text-white'
-                          : 'bg-primary/10 text-primary hover:bg-primary/20'
+                          : 'bg-primary/10 text-primary hover:bg-gradient-primary hover:text-white'
                       }`}>
                         Low
                       </span>
@@ -236,7 +236,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
                       <span className={`inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium ${
                         taskData.priority === 'medium'
                           ? 'bg-secondary text-white'
-                          : 'bg-secondary/10 text-secondary hover:bg-secondary/20'
+                          : 'bg-secondary/10 text-secondary hover:bg-gradient-secondary hover:text-white'
                       }`}>
                         Medium
                       </span>
@@ -254,7 +254,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
                       <span className={`inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium ${
                         taskData.priority === 'high'
                           ? 'bg-accent text-white'
-                          : 'bg-accent/10 text-accent hover:bg-accent/20'
+                          : 'bg-accent/10 text-accent hover:bg-gradient-accent hover:text-white'
                       }`}>
                         High
                       </span>
@@ -266,7 +266,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
               <div className="flex justify-end pt-2">
                 <button
                   type="submit"
-                  className="btn btn-primary shadow-md flex items-center"
+                  className="btn bg-gradient-primary hover:bg-gradient-primary-hover shadow-md flex items-center text-white"
                 >
                   <Save size={16} className="mr-2" />
                   Create Task
@@ -283,7 +283,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center"
+            className="mx-auto mb-4 w-16 h-16 rounded-full bg-gradient-primary/30 flex items-center justify-center"
           >
             <ListTodo size={32} className="text-primary" />
           </motion.div>
@@ -295,7 +295,7 @@ const MainFeature = ({ onTaskCreated, categories }) => {
           
           <button
             onClick={() => setIsFormOpen(true)}
-            className="btn btn-primary shadow-md"
+            className="btn bg-gradient-primary hover:bg-gradient-primary-hover shadow-md text-white"
           >
             <PlusCircle size={18} className="mr-2" />
             Create New Task
