@@ -8,9 +8,9 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#7c3aed',
-          light: '#a78bfa',
-          dark: '#5b21b6'
+          DEFAULT: '#800000',
+          light: '#a52a2a',
+          dark: '#4d0000'
         },
         secondary: {
           DEFAULT: '#06b6d4',
@@ -47,20 +47,20 @@ export default {
       }
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(to right, #7c3aed, #8b5cf6, #a78bfa)',
+        'gradient-primary': 'linear-gradient(to right, #800000, #9a1212, #a52a2a)',
         'gradient-secondary': 'linear-gradient(to right, #06b6d4, #0ea5e9, #38bdf8)',
         'gradient-accent': 'linear-gradient(to right, #f43f5e, #fb7185, #fda4af)',
-        'gradient-primary-dark': 'linear-gradient(to right, #5b21b6, #7c3aed, #8b5cf6)',
+        'gradient-primary-dark': 'linear-gradient(to right, #4d0000, #800000, #9a1212)',
         'gradient-secondary-dark': 'linear-gradient(to right, #0891b2, #06b6d4, #22d3ee)',
         'gradient-accent-dark': 'linear-gradient(to right, #be123c, #f43f5e, #fb7185)',
         'gradient-surface': 'linear-gradient(to bottom right, #f8fafc, #f1f5f9)',
         'gradient-surface-dark': 'linear-gradient(to bottom right, #0f172a, #1e293b)',
         'gradient-card': 'linear-gradient(145deg, #ffffff, #f8fafc)',
         'gradient-card-dark': 'linear-gradient(145deg, #1e293b, #0f172a)',
-        'gradient-primary-hover': 'linear-gradient(to right, #6d28d9, #7c3aed, #8b5cf6)',
+        'gradient-primary-hover': 'linear-gradient(to right, #690000, #800000, #9a1212)',
         'gradient-secondary-hover': 'linear-gradient(to right, #0e7490, #06b6d4, #0ea5e9)',
         'gradient-accent-hover': 'linear-gradient(to right, #e11d48, #f43f5e, #fb7185)',
-        'gradient-primary-active': 'linear-gradient(to right, #5b21b6, #6d28d9, #7c3aed)',
+        'gradient-primary-active': 'linear-gradient(to right, #4d0000, #690000, #800000)',
         'gradient-secondary-active': 'linear-gradient(to right, #0891b2, #0e7490, #06b6d4)',
         'gradient-accent-active': 'linear-gradient(to right, #be123c, #e11d48, #f43f5e)'
       }  
