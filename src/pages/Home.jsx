@@ -108,7 +108,7 @@ const Home = () => {
           </button>
           <button
             onClick={() => setFilterStatus('completed')}
-            className={`btn ${filterStatus === 'completed' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}
+            className={`btn ${filterStatus === 'completed' ? 'bg-gradient-primary text-white' : 'btn-outline'}`}>
             <CheckSquare size={18} className="mr-2" />
             Completed
           </button>
